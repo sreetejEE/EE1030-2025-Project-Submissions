@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
 
-c_lib = ctypes.CDLL('./svd_compression.so') #loads the c-library
+c_lib = ctypes.CDLL('../c_backend/./svd_compression.so') #loads the c-library
 
 #defining the argument types 
 c_lib.svd_reconstructed.argtypes=[np.ctypeslib.ndpointer(dtype=np.float64,ndim=2,flags='C_CONTIGUOUS') ,
